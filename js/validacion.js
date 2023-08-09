@@ -5,14 +5,26 @@ function showAlertSuccess() {
 function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
+
 document.addEventListener("DOMContentLoaded", function() {
-    const regBtn = document.getElementById("regBtn");
+    let regBtn = document.getElementById("regBtn");
     
     regBtn.addEventListener("click", function() {
-        const password1 = document.getElementById("password1").value;
-        const password2 = document.getElementById("password2").value;
+        let nombre = document.getElementById("nombre").value;
+        let apellido = document.getElementById("apellido").value;
+        let email = document.getElementById("email").value;
+        let password1 = document.getElementById("password1").value;
+        let password2 = document.getElementById("password2").value;
 
-       
+        if (nombre.trim() === "" || apellido.trim() === "") {
+            showAlertError();
+            return;
+        }
+
+        if (email.trim() === "") {
+            showAlertError();
+            return;
+        }
 
         if (password1.length < 6) {
             showAlertError();
@@ -24,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        const terminosCheckbox = document.getElementById("terminos");
+        let terminosCheckbox = document.getElementById("terminos");
         if (!terminosCheckbox.checked) {
             showAlertError();
             return;

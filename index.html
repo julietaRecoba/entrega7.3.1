@@ -11,7 +11,7 @@
 </head>
 
 <body class="bg-light">
-  
+
   <div class="container">
     <main>
       <div class="row mt-4">
@@ -20,38 +20,37 @@
           <hr class="my-4">
           <div class="row g-3">
             <div class="col-sm-6">
-              <form method="post" action="procesar_registro.php">
-              <label for="nombre" class="form-label" required>Nombre</label>
-              <input class="form-control" type="text" id="nombre" name="nombre" required><br><br> 
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
             </div>
 
             <div class="col-sm-6">
-              <label for="apellido" class="form-label" required>Apellido</label>
+              <label for="apellido" class="form-label">Apellido</label>
               <input type="text" class="form-control" id="apellido" required>
             </div>
 
             <div class="col-12">
-              <label for="email" class="form-label" required>Email</label>
+              <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" id="email" required>
             </div>
 
             <div class="col-sm-6">
-              <label for="password1" class="form-label" required>Contraseña</label>
+              <label for="password1" class="form-label">Contraseña</label>
               <input type="password" class="form-control" id="password1" minlength="6" required>
             </div>
 
             <div class="col-sm-6">
-              <label for="password2" class="form-label" required>Repetir contraseña</label>
-              <input type="password" class="form-control" id="password2" required>
+              <label for="password2" class="form-label">Repetir contraseña</label>
+              <input type="password" class="form-control" id="password2" minlength="6" required>
             </div>
 
             <div class="form-check">
               <input type="checkbox" class="form-check-input" id="terminos" required>
-              <label class="form-check-label" for="terminos" required>Acepto los términos y condiciones del servicio.</label>
+              <label class="form-check-label" for="terminos">Acepto los términos y condiciones del servicio.</label>
             </div>
 
-            <button type="submit" class="btn btn-primary" type="button" id="regBtn">Registrarme</button>
-          </form>
+            <button class="btn btn-primary" type="button" id="regBtn" type="submit">Registrarme</button>
+
 
           </div>
         </div>
